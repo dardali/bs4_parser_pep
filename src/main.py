@@ -131,7 +131,7 @@ def pep(session):
 
         if len(pep_row[pip].td.text) > 1:
             table_status = pep_row[pip].td.text[1:]
-            if status[0] != table_status:
+            if status != EXPECTED_STATUS[table_status]:
                 logging.info(
                     '\n'
                     'Несовпадающие статусы:\n'
